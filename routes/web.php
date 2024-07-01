@@ -7,9 +7,7 @@ use App\Http\Controllers\ProductController;
 //     return view('welcome');
 // });
 
-Route::get('/', function () {
-    return view('products.show');
-});
+Route::get('/',[ProductController::class,'index'])->name('products.show');
 
 // Route::get('/',[ProductController::class,'index'])->name('products.index');
 // Route::get('product/create',[ProductController::class,'create'])->name('products.create');
